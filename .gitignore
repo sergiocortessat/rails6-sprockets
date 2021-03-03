@@ -8,6 +8,8 @@
 /.bundle
 # Ignore bundler vendor directory.
 /vendor
+# Ignore the sqlite3 databases
+/db/*.sqlite3
 
 # Ignore all logfiles and tempfiles.
 /log/*
