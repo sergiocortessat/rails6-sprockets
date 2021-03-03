@@ -23,13 +23,13 @@ default: &default
 
 development:
   <<: *default
-  database: rails6_ruby3_hk_ghwf_psql_development
+  database: rails_project_template_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user running Rails.
-  #username: rails6_ruby3_hk_ghwf_psql
+  #username: rails_project_template
 
   # The password associated with the postgres role (username).
   #password:
@@ -57,7 +57,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: rails6_ruby3_hk_ghwf_psql_test
+  database: rails_project_template_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -81,6 +81,6 @@ test:
 #
 production:
   <<: *default
-  database: rails6_ruby3_hk_ghwf_psql_production
-  username: rails6_ruby3_hk_ghwf_psql
-  password: <%= ENV['RAILS6_RUBY3_HK_GHWF_PSQL_DATABASE_PASSWORD'] %>
+  database: rails_project_template_production
+  username: rails_project_template
+  password: <%= ENV['RAILS_PROJECT_TEMPLATE_DATABASE_PASSWORD'] %>
