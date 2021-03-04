@@ -24,6 +24,7 @@ gem 'jbuilder', '~> 2.7'
 # gem 'image_processing', '~> 1.2'
 
 # Extra gems for production
+gem 'devise', '~> 4.7', '>= 4.7.3'
 gem 'devise-i18n', '~> 1.9', '>= 1.9.2'
 
 # Reduces boot times through caching; required in config/boot.rb
