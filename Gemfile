@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '~> 3.0'
+ruby '~> 3.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.3'
@@ -23,6 +23,9 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
+# Extra gems for production
+gem 'devise-i18n', '~> 1.9', '>= 1.9.2'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
@@ -36,6 +39,8 @@ group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   # Add the SQLite3 database for development and test
   gem 'sqlite3', '~> 1.4', '>= 1.4.2'
+  # Extra development gems
+  gem 'rubocop-rails_config', '~> 1.3', '>= 1.3.3'
 end
 
 group :development do
@@ -47,6 +52,15 @@ group :development do
   gem 'rack-mini-profiler', '~> 2.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+end
+
+group :test do
+  # Adds support for Capybara system testing and selenium driver
+  gem 'capybara', '>= 3.26'
+  # Extra testing gems
+  gem 'database_cleaner', '~> 2.0', '>= 2.0.1'
+  gem 'rexml', '~> 3.2', '>= 3.2.4'
+  gem 'shoulda-matchers', '~> 4.5', '>= 4.5.1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
