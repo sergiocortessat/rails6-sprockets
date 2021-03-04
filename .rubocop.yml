@@ -1,11 +1,11 @@
+inherit_gem:
+  rubocop-rails_config:
+    - config/rails.yml
 AllCops:
   Exclude:
     - ".bundle/**/*"
-    - "Guardfile"
-    - "Rakefile"
-    - "bin/*"
-    - "config/**/*"
-    - "db/**/*"
+    - "bin/bundle"
+    - "config/initializers/devise.rb"
     - "node_modules/**/*"
     - "vendor/**/*"
   DisplayCopNames:                     true
