@@ -1,6 +1,9 @@
 inherit_gem:
   rubocop-rails_config:
     - config/rails.yml
+require:
+  - rubocop-rails
+  - rubocop-rspec
 AllCops:
   Exclude:
     - ".bundle/**/*"

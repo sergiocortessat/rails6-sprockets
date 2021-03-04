@@ -42,6 +42,7 @@ group :development, :test do
   gem "sqlite3", "~> 1.4", ">= 1.4.2"
   # Extra development gems
   gem "rubocop-rails_config", "~> 1.3", ">= 1.3.3"
+  gem "rubocop-rspec", "~> 2.2"
 end
 
 group :development do

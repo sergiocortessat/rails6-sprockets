@@ -18,7 +18,7 @@ jobs:
         run:              |
           [ -f .rubocop.yml ] || wget https://raw.githubusercontent.com/microverseinc/linters-config/master/ruby/.rubocop.yml
       - name:             Rubocop Report
-        run:              bundle exec rubocop --require rubocop-rails --color
+        run:              bundle exec rubocop --color
   stylelint:
     name:                 StyleLint
     runs-on:              ubuntu-latest
