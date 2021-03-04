@@ -15,8 +15,6 @@ jobs:
         with:
           bundler-cache: true
       - name:            Setup RSpec compatible with Capybara
-        run:             |
-          bundle exec rails webpacker:install
-          bundle exec rails webpacker:compile
+        run:             bundle exec bin/setup
       - name:            RSpec Report
         run:             bundle exec rspec --force-color --format documentation
