@@ -2,7 +2,10 @@ inherit_gem:
   rubocop-rails_config:
     - config/rails.yml
 require:
+  - rubocop-faker
+  - rubocop-i18n
   - rubocop-rails
+  - rubocop-rake
   - rubocop-rspec
 AllCops:
   Exclude:
