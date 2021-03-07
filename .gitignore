@@ -10,6 +10,8 @@
 /vendor
 # Ignore the sqlite3 databases
 /db/*.sqlite3
+# Ignore RSpec Example files
+/spec/examples.txt
 
 # Ignore all logfiles and tempfiles.
 /log/*
