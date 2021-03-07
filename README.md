@@ -2,7 +2,7 @@
   - Ruby 3.0
 
 # Configuration
-1. Use the template and make sure to check "Include all branches"
+1. Use the template and make sure to **uncheck** "Include all branches"
 1. Clone the repository to the local machine
 1. Initialize git-flow in all local machines with `git flow init`
     1. Set production branch: `main`
