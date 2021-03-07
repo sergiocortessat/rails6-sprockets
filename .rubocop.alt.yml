@@ -1,6 +1,8 @@
 AllCops:
   Exclude:
     - ".bundle/**/*"
+    - "bin/bundle"
+    - "config/initializers/devise.rb"
     - "node_modules/**/*"
     - "vendor/**/*"
   DisplayCopNames:                     true
