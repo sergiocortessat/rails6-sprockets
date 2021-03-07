@@ -8,7 +8,7 @@
     1. Set production branch: `main`
     1. Set development branch: `development`
     1. Set the rest of the options as defaults
-    1. Initialize a new feature branch. You can call it `setup-from-template`
+    1. Initialize a new feature branch. You can call it `setup-template`
 1. Run `bundle update` to install the latest version of the gems for the project
 1. Reinstall and setup the required packages by running `bundle exec bin/setup`
 1. Generate the Rails credentials for the project: `EDITOR=true bundle exec rails credentials:edit`
@@ -19,9 +19,14 @@
 1. Finalize your feature branch and merge your changes
 1. Everything should be ready to start working!
 
-> **Note**: all packages already set up, this includes: Devise, RSpec, Capybara, Factory Bot, Rubocop, GitHub Workflow, and it's ready to deploy to Heroku. Start to work with the models, views, and controllers. Note that you'll need to use the correct generators (i.e. `bundle exec rails generate devise User`).
+# Code style
+This template uses Rubocop for enforcing the code style. In the root path, there are 2 Rubocop configurations. The recommended default is for all new Rails projects. It uses the official and latest cops for the core components and Rails itself.
+
+The alternative version is unmaintained and therefore not recommended. Besides being unmaintained, it disables, changes, and enables cops that conflict with the default and recommended cops. Microverse projects have to use them despite the official recommendation.
+
+> **Note**: all packages already set up, this includes: Devise, RSpec, Capybara, Factory Bot, Rubocop, GitHub Workflow, Faker and it's ready to deploy to Heroku. Start to work with the models, views, and controllers. Note that you'll need to use the correct generators (i.e. `bundle exec rails generate devise User`).
 >
 > **Note**: The development/test version will use SQLite3, but the deployed version will use PostgreSQL. The bundle command will install the `pg` gem anyway, and if it fails to set it up, install PostgreSQL even if never used or configured.
 
-# Important
-1. Change the hostname for devise when deploying to Heroku, check the files inside `config/environments`
+# Notes before deploying
+1. Change the hostname for devise when deploying to production, check the files inside `config/environments`
