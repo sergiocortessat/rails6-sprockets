@@ -13,6 +13,7 @@
 1. Reinstall and setup the required packages by running `bundle exec bin/setup`
 1. Generate the Rails credentials for the project: `EDITOR=true bundle exec rails credentials:edit`
 1. Change the name of the project. Use the commit [324932f](../../commit/324932fbc5e055a3f40dbe2a565ce663f85235d7) as reference
+1. Also, do not forget to change the name and version from the `package.json` file
 1. Execute the Rubocop command, so the linter's workflow won't fail: `bundle exec rubocop -A`
 1. Add and commit all your changes
 1. Finalize your feature branch and merge your changes
