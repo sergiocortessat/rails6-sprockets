@@ -10,14 +10,21 @@ require:
 AllCops:
   Exclude:
     - ".bundle/**/*"
-    - "bin/bundle"
-    - "config/initializers/devise.rb"
     - "node_modules/**/*"
     - "vendor/**/*"
   DisplayCopNames:                true
   NewCops:                        enable
+  TargetRubyVersion:              3.0
 
 Layout/LineLength:
   Max:                            120
+  Exclude:
+  - "bin/bundle"
+  - "config/initializers/devise.rb"
 Style/FrozenStringLiteralComment:
   EnforcedStyle:                  never
+
+I18n/RailsI18n:
+  Enabled:                        true
+I18n/GetText:
+  Enabled:                        false

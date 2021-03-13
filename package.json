@@ -2,18 +2,17 @@
   "name": "RailsProjectTemplate",
   "private": true,
   "dependencies": {
-    "@rails/actioncable": "^6.0",
-    "@rails/activestorage": "^6.0",
-    "@rails/ujs": "^6.0",
-    "@rails/webpacker": "5.2",
+    "@csstools/normalize.css": "^11.0",
+    "@rails/actioncable": "^6.1",
+    "@rails/activestorage": "^6.1",
+    "@rails/ujs": "^6.1",
+    "@rails/webpacker": "^5.2",
     "turbolinks": "^5.2"
   },
-  "version": "0.1.0",
+  "version": "v0.20",
   "devDependencies": {
-    "stylelint": "^13.11",
-    "stylelint-config-standard": "^20.0",
-    "stylelint-csstree-validator": "^1.9",
-    "stylelint-scss": "^3.19",
+    "stylelint": "^13.12",
+    "stylelint-config-sass-guidelines": "^8.0",
     "webpack-dev-server": "^3.11"
   }
 }

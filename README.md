@@ -24,9 +24,9 @@ This template uses Rubocop for enforcing the code style. In the root path, there
 
 The alternative version is unmaintained and therefore not recommended. Besides being unmaintained, it disables, changes, and enables cops that conflict with the default and recommended cops. Microverse projects have to use them despite the official recommendation.
 
+# Notes before deploying
+1. Change the hostname for devise when deploying to production, check the files inside `config/environments`
+
 > **Note**: all packages already set up, this includes: Devise, RSpec, Capybara, Factory Bot, Rubocop, GitHub Workflow, Faker and it's ready to deploy to Heroku. Start to work with the models, views, and controllers. Note that you'll need to use the correct generators (i.e. `bundle exec rails generate devise User`).
 >
 > **Note**: The development/test version will use SQLite3, but the deployed version will use PostgreSQL. The bundle command will install the `pg` gem anyway, and if it fails to set it up, install PostgreSQL even if never used or configured.
-
-# Notes before deploying
-1. Change the hostname for devise when deploying to production, check the files inside `config/environments`
