@@ -9,7 +9,7 @@
     "@rails/webpacker": "^5.2",
     "turbolinks": "^5.2"
   },
-  "version": "0.1.0",
+  "version": "v0.20",
   "devDependencies": {
     "stylelint": "^13.12",
     "stylelint-config-sass-guidelines": "^8.0",
