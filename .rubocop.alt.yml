@@ -1,8 +1,6 @@
 AllCops:
   Exclude:
     - ".bundle/**/*"
-    - "bin/bundle"
-    - "config/initializers/devise.rb"
     - "node_modules/**/*"
     - "vendor/**/*"
   DisplayCopNames:                     true
@@ -46,6 +44,9 @@ Style/HashTransformValues:
 
 Layout/LineLength:
   Max:                                 120
+  Exclude:
+  - "bin/bundle"
+  - "config/initializers/devise.rb"
 Layout/HashAlignment:
   EnforcedColonStyle:                  key
 Layout/ExtraSpacing:
