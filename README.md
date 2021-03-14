@@ -1,32 +1,51 @@
 # Dependencies
-  - Ruby 3.0
 
-# Configuration
-1. Use the template and make sure to **uncheck** "Include all branches"
-1. Clone the repository to the local machine
-1. Initialize git-flow in all local machines with `git flow init`
-    1. Set production branch: `main`
-    1. Set development branch: `development`
-    1. Set the rest of the options as defaults
-    1. Initialize a new feature branch. You can call it `setup-template`
-1. Run `bundle update` to install the latest version of the gems for the project
-1. Reinstall and setup the required packages by running `bundle exec bin/setup`
-1. Generate the Rails credentials for the project: `EDITOR=true bundle exec rails credentials:edit`
-1. Change the name of the project. Use the commit [324932f](../../commit/324932fbc5e055a3f40dbe2a565ce663f85235d7) as reference
-1. Also, do not forget to change the name and version from the `package.json` file
-1. Execute the Rubocop command, so the linter's workflow won't fail: `bundle exec rubocop -A`
-1. Add and commit all your changes
-1. Finalize your feature branch and merge your changes
-1. Everything should be ready to start working!
+-   Ruby 3.0
+-   Node.js 14 or newer
+
+# Configuration [v0.20]
+
+1.  Use the template and make sure to **uncheck** "Include all branches"
+2.  Clone the repository to the local machine
+3.  Initialize git-flow in all local machines with `git flow init`
+    1.  Set production branch: `main`
+    2.  Set development branch: `development`
+    3.  Set the rest of the options as defaults
+    4.  Initialize a new feature branch. You can call it `setup-template`
+4.  Run `bundle update` to install the latest version of the gems for the project
+5.  Reinstall and setup the required packages by running `bundle exec bin/setup`
+6.  Generate the Rails credentials for the project: `EDITOR=true bundle exec rails credentials:edit`
+7.  Change the name of the project. Use the commit [324932f](https://github.com/NoTengoBattery/rails6-ruby3-hk-ghwf-psql/commit/324932fbc5e055a3f40dbe2a565ce663f85235d7) as reference
+8.  Also, do not forget to change the name and version from the `package.json` file
+9.  Execute the Rubocop command, so the linter's workflow won't fail: `bundle exec rubocop -A`
+10. Execute the Stylelint command, so the linter's workflow won't fail: `npx stylelint --fix "**/*.{css,scss}"`
+11. Add and commit all your changes
+12. Finalize your feature branch and merge your changes
+13. Everything should be ready to start working!
 
 # Code style
-This template uses Rubocop for enforcing the code style. In the root path, there are 2 Rubocop configurations. The recommended default is for all new Rails projects. It uses the official and latest cops for the core components and Rails itself.
 
-The alternative version is unmaintained and therefore not recommended. Besides being unmaintained, it disables, changes, and enables cops that conflict with the default and recommended cops. Microverse projects have to use them despite the official recommendation.
+This template uses Rubocop and Stylelint for enforcing the code style. In the root path, there are default Rubocop and Stylelint configurations. The recommended default is for all new Rails projects in general. It uses the official and latest cops and lints for the Rails components, user code, and stylesheets.
 
 # Notes before deploying
-1. Change the hostname for devise when deploying to production, check the files inside `config/environments`
 
-> **Note**: all packages already set up, this includes: Devise, RSpec, Capybara, Factory Bot, Rubocop, GitHub Workflow, Faker and it's ready to deploy to Heroku. Start to work with the models, views, and controllers. Note that you'll need to use the correct generators (i.e. `bundle exec rails generate devise User`).
->
-> **Note**: The development/test version will use SQLite3, but the deployed version will use PostgreSQL. The bundle command will install the `pg` gem anyway, and if it fails to set it up, install PostgreSQL even if never used or configured.
+1.  Change the hostname for devise when deploying to production, check the files inside `config/environments`
+
+# General notes
+
+1.  All provided packages are already set up and ready to work and prepared for deployment using either Heroku or Mina. Note that some extra configuration is still needed. Included in this template:
+    -   Mina
+    -   Faker
+    -   RSpec
+    -   Devise
+    -   Capybara
+    -   Factory Bot
+    -   Normalize.css
+    -   Internationalization (thanks to @NoTengoBattery)
+    -   Stylelint with the official SASS configuration (thanks to @NoTengoBattery)
+    -   Rubocop with the official Rails configuration and extra enforcements (thanks to @NoTengoBattery)
+    -   Mina deployment to "bare metal" servers (it's fixed to work with Puma, thanks to @NoTengoBattery)
+    -   GitHub Workflows for linter enforcing and test suite (suitable for CI, thanks to @NoTengoBattery)
+    -   Support for both SQLite3 and PostgreSQL
+        -   SQLite3 for testing/development
+        -   PostgreSQL for deploying/production
